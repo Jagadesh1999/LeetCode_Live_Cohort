@@ -1,5 +1,5 @@
-// 
-
+// Application of Framework 2 : 
+// Problem-1 : Longest Subarray of 1s in a binary array with atmost k flips 
 public class Solution
 {
     public static void solve(int[] nums, int k) {
