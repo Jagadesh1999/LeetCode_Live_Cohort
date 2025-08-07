@@ -1,4 +1,6 @@
-public class Main
+// Application of Framework 2 : 
+// Problem-2 : No. of subarrays with atleast k distinct elements
+public class Solution
 {
     public static void atleastKDistinct(int[] nums, int k) {
         System.out.println((nums.length * (nums.length + 1) / 2) -  (atmostKDistinct(nums, k - 1)));
