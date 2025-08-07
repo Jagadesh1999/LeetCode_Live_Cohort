@@ -16,6 +16,7 @@ public class Solution
             if(tail > head) {
                 tail++;
                 head = tail - 1;
+                sum = 0;
             }else {
                 sum -= nums[tail];
                 tail++;
