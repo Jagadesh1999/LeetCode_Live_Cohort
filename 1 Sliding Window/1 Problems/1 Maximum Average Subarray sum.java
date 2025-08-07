@@ -1,4 +1,5 @@
-// Maximum Average Subarray Sum 
+// Application of Framework 1 : 
+// Problem-1 : Maximum Average Subarray Sum 
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
         int currSum = 0; int maxSum = Integer.MIN_VALUE; int left = 0; int right = 0;
