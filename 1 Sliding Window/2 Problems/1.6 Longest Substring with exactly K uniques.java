@@ -1,4 +1,4 @@
-// 5. Longest Substring with exactly k distinct
+// 6. Longest Substring with atmost k distinct
 
 class Solution {
     public int longestKSubstr(String s, int k) {
@@ -16,7 +16,7 @@ class Solution {
                 if(map.get(s.charAt(head)) == 1) distinctCount++;
             }
             
-            if(distinctCount == k) resMax = Math.max(resMax, head - tail + 1);
+            if(distinctCount <= k) resMax = Math.max(resMax, head - tail + 1);
             
             if(tail > head) {
                 tail++;
@@ -26,7 +26,6 @@ class Solution {
                 map.put(s.charAt(tail), map.get(s.charAt(tail))-1);
                 if(map.get(s.charAt(tail)) == 0) {
                     distinctCount--;
-                    map.remove(s.charAt(tail));
                 }
                 tail++;
             }
