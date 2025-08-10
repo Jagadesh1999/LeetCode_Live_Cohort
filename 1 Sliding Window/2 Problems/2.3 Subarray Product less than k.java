@@ -35,5 +35,5 @@ class Solution {
         }
         return total_subarrays;
     }
-} // O(n)
+} // TC : O(n)
 
