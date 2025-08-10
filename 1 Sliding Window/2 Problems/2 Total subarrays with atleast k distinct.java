@@ -26,7 +26,7 @@ public class Solution
             if(tail > head) {
                 tail ++;
                 head = tail - 1;
-		map.clear();
+				map.clear();
                 distinctCount = 0;  // Reset state as window is empty
             } else {
                 map.put(nums[tail], map.getOrDefault(nums[tail], 0) - 1);
