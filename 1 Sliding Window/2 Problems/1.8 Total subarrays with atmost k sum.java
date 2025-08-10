@@ -1,5 +1,5 @@
 // Application of Framework 2 : 
-// Problem-5 : Number of subarrays with atmost k sum
+// Problem-8 : Number of subarrays with atmost k sum
 public class Solution
 {
     public static int solve(int[] nums, int k) {
