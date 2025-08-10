@@ -1,4 +1,4 @@
-// 1.7 Longest Substring with exactly k distinct
+// 7 Longest Substring with exactly k distinct
 
 class Solution {
     public int longestKSubstr(String s, int k) {
