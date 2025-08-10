@@ -1,4 +1,4 @@
-// 4. Longest Substring Without Repeating Characters
+// 9. Longest Substring Without Repeating Characters
 // This problem statement directly maps to the dynamic sized sliding window template.
 class Solution {
     public int lengthOfLongestSubstring(String s) {
