@@ -1,5 +1,5 @@
 // Application of Framework 2 : 
-// Problem-2 : No. of subarrays with atleast k distinct elements
+// Problem-3 : No. of subarrays with atleast k distinct elements
 public class Solution
 {
     public static void atleastKDistinct(int[] nums, int k) {
