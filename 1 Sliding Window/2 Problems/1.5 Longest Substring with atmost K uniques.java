@@ -1,4 +1,4 @@
-// 6. Longest Substring with atmost k distinct
+// 5. Longest Substring with atmost k distinct
 
 class Solution {
     public int longestKSubstr(String s, int k) {
