@@ -5,10 +5,10 @@ class NumArray {
 
     public NumArray(int[] nums) {
         prefix_nums = new int[nums.length];
+        
         prefix_nums[0] = nums[0];
-
         for(int i = 1; i < prefix_nums.length; i++) {
-            prefix_nums[i] = prefix_nums[i-1] + nums[i];
+            prefix_nums[i] = prefix_nums[i-1] + nums[i]; // Remember the expression
         }
     }
     
@@ -24,7 +24,7 @@ class NumArray {
         if(left == 0) {
             return prefix_nums[right];
         }
-        return prefix_nums[right] - prefix_nums[left-1];
+        return prefix_nums[right] - prefix_nums[left-1]; // Remember the expression
     }
 } // TC : O(n)
 
