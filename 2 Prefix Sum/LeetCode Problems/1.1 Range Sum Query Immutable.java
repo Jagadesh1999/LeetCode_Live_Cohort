@@ -26,7 +26,7 @@ class NumArray {
         }
         return prefix_nums[right] - prefix_nums[left-1]; // Remember the expression
     }
-} // TC : O(n)
+} // TC : O(n) + m * O(1) -> O(n)
 
 /**
  * Your NumArray object will be instantiated and called as such:
