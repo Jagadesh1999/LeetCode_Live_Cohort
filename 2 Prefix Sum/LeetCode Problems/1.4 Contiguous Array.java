@@ -17,6 +17,9 @@ class Solution {
         int currentPrefixSum = 0; int length = 0; int maxLength = 0; 
 
         Map<Integer, Integer> map = new HashMap<>();
+
+        // Before we began, we had prefix sum 0 at a virtual position -1.
+        // This ensures subarrays starting from the very first element are counted correctly for length.
         map.put(0, -1);
 
         // Key idea - transform all the 0s in the nums array to 1
