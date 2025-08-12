@@ -4,6 +4,7 @@ class NumArray {
     int[] prefix_nums;
 
     public NumArray(int[] nums) {
+        // Template for prefix sum implementation
         prefix_nums = new int[nums.length];
         
         prefix_nums[0] = nums[0];
