@@ -23,7 +23,7 @@ class NumArray {
 
     public int sumRange(int left, int right) {
         if(left == 0) {
-            return prefix_nums[right];
+            return prefix_nums[right]; // Very important corner case
         }
         return prefix_nums[right] - prefix_nums[left-1]; // Remember the expression
     }
