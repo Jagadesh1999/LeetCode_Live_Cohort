@@ -48,7 +48,7 @@ Output: true
 //     }
 // } // TC : O(n)
 
-Classic and Elegant Implementation : 
+Classic and Elegant Implementation : // Remember this structure
 
 class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
