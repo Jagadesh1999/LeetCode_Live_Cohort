@@ -17,11 +17,6 @@ Return the leftmost pivot index. If no such index exists, return -1.
 // Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
 // Step 3 : Return the index if the condition is true. If no such element, return -1.
 
-// Approach : 
-// Step 1 : Compute the cummulative sum
-// Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
-// Step 3 : Return the index if the condition is true. If no such element, return -1.
-
 class Solution {
     public int numOfSubarrays(int[] arr) {
         int MOD = 1000000007;
