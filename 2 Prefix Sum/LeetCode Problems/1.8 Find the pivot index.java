@@ -17,6 +17,11 @@ Return the leftmost pivot index. If no such index exists, return -1.
 // Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
 // Step 3 : Return the index if the condition is true. If no such element, return -1.
 
+// Approach : 
+// Step 1 : Compute the cummulative sum
+// Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
+// Step 3 : Return the index if the condition is true. If no such element, return -1.
+
 class Solution {
     public int pivotIndex(int[] nums) {
         int nums_sum = 0; int prefixSum = 0; 
@@ -27,12 +32,13 @@ class Solution {
 
         for(int i = 0; i < nums.length; i++) { 
             prefixSum += nums[i];
-            int x = prefixSum - nums[i];
-            int y = nums_sum - prefixSum;
+            int left_sum = prefixSum - nums[i];
+            int right_sum = nums_sum - prefixSum;
 
             if(x == y) return i;
         }
         return -1;
     }
 } // TC : O(n)
+
 
