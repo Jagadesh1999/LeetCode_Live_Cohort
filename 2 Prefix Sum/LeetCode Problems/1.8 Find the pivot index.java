@@ -17,23 +17,27 @@ Return the leftmost pivot index. If no such index exists, return -1.
 // Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
 // Step 3 : Return the index if the condition is true. If no such element, return -1.
 
+// Approach : 
+// Step 1 : Compute the cummulative sum
+// Step 2 : Check if the prefixSum - nums[i] is equals to the cummulative sum - prefixSum
+// Step 3 : Return the index if the condition is true. If no such element, return -1.
+
 class Solution {
-    public int numOfSubarrays(int[] arr) {
-        int MOD = 1000000007;
-        int currentPrefixSum = 0; int diff = 0; int res = 0;
-        int oddSum = 0; int evenSum = 1;
+    public int pivotIndex(int[] nums) {
+        int nums_sum = 0; int prefixSum = 0; 
 
-        for(int i = 0; i < arr.length; i++) {
-            currentPrefixSum += arr[i]; 
-
-            if(currentPrefixSum % 2 == 0) {
-                res = (res + oddSum) % MOD;
-                evenSum++;
-            } else {
-                res = (res + evenSum) % MOD;
-                oddSum++;
-            }
+        for(int i = 0; i < nums.length; i++) {
+            nums_sum += nums[i];
         }
-        return res;
+
+        for(int i = 0; i < nums.length; i++) { 
+            prefixSum += nums[i];
+            int left_sum = prefixSum - nums[i];
+            int right_sum = nums_sum - prefixSum;
+
+            if(x == y) return i;
+        }
+        return -1;
     }
 } // TC : O(n)
+
