@@ -1,11 +1,5 @@
 // 5. Find the minimum in rotated sorted array
 
-// Logic : The minimum point after rotation has the next point smaller than itself.
-
-// Logic : 
-// The minimum point after rotation has the next point smaller than or equal to itself and alse the 
-// before point greater than or equal to itself
-
 // Logic : 
 // The minimum point after rotation has the next point smaller than or equal to itself and alse the 
 // before point greater than or equal to itself
@@ -18,7 +12,7 @@ class Solution {
     public int findMin(int[] nums) {
         int low = 0; 
         int high = nums.length - 1;
-        int res = nums.length;
+        int res = -1;
 
         while(low <= high) {
             int mid = low + (high - low) / 2;
@@ -29,7 +23,7 @@ class Solution {
                 high = mid - 1;
             }
         }
-        return (res == nums.length) ? nums[0] : nums[res];
-
+        if(res == -1) return -1;
+        return nums[res];
     }
 } // TC : O(log2(n))
