@@ -6,9 +6,13 @@
 // The minimum point after rotation has the next point smaller than or equal to itself and alse the 
 // before point greater than or equal to itself
 
+// Logic : 
+// The minimum point after rotation has the next point smaller than or equal to itself and alse the 
+// before point greater than or equal to itself
+
 class Solution {
     public boolean check(int[] nums, int mid) {
-        return (nums[mid] < nums[0]);
+        return (nums[mid] <= nums[nums.length-1]);
     }
 
     public int findMin(int[] nums) {
