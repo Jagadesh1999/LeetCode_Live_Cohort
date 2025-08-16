@@ -1,4 +1,4 @@
-// 3. Find the minimum in rotated sorted array
+// 5. Find the minimum in rotated sorted array
 
 // Logic : The minimum point after rotation has the next point smaller than itself.
 
