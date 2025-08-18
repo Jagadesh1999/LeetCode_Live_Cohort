@@ -41,24 +41,25 @@ class Solution {
     }
 } // TC : O(m * log n)
 
-// The better approach would be of O(m + n)
+// The better approach would be of O(m + n) which is pointers based
 class Solution {
     public int countNegatives(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
+        int total_rows = grid.length;
+        int total_columns = grid[0].length;
         int row = 0;
-        int column = n - 1;
-        int res = 0;
+        int column = grid[0].length-1;
 
-        while(row < m && column >= 0) {
+        int totalNegatives = 0;
+
+        while(row < total_rows && column >= 0) {
             if(grid[row][column] < 0) {
                 // All elements below in this column are negative
-                res += m - row;
+                totalNegatives += total_rows - row;
                 column--; // Move left to next column
             } else {
                 row++; // Move down to next row
             }
         }
-        return res;
+        return totalNegatives;
     }
 } // TC : O(m + n)
