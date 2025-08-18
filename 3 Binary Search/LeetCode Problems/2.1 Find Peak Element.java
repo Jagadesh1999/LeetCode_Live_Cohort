@@ -43,3 +43,24 @@ class Solution {
 // 2. Ascending array (the last element is the peak)
 // 3. Descending array (the first element is the peak)
 // 4. Single element array (the element is the peak)
+
+// Dry run for one of the corner case :
+// 1. Both peaks are at the ends of the array
+// nums : [2, 1, 3, 4]
+
+// low = 0; high = 3;
+// mid = 1;
+// nums[1] = 1; nums[2] = 3;
+// 1 > 3 - False
+// low = 2; res = 2;
+
+// low = 2; high = 3
+// mid = 2;
+// nums[2] = 3; nums[3] = 4;
+// 3 < 4 - False
+// low = 3; res = 3
+
+// low = 3; high = 3;
+// mid = 3
+// res = 3
+
