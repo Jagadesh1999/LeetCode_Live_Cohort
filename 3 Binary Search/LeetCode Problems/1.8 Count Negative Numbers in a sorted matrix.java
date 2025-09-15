@@ -7,59 +7,50 @@
 // Output: 8
 // Explanation: There are 8 negatives number in the matrix.
 
-class Solution {
-    public int check(int[] row, int mid) {
-        if (row[mid] < 0) return 1;
-        else return 0;
-    }
+// // Approach 1 - Binary Search
+// class Solution {
+//     public int countNegatives(int[][] grid) {
+//         int total_count = 0;
+//         for(int i = 0; i < grid.length; i++) {
+//             int low = 0; 
+//             int ans = -1;
+//             int high = grid[i].length - 1;
 
-    public int countNegatives(int[][] grid) {
-        int m = grid.length;
-        int res = 0;
-        for (int i = 0; i < m; i++) {
-            int low = 0;
-            int high = grid[i].length - 1;
-            int res_temp = -1;
+//             while(low <= high) {
+//                 int mid = low + (high - low) / 2;
+//                 if(grid[i][mid] < 0) {
+//                     ans = mid;
+//                     high = mid - 1;
+//                 } else {
+//                     low = mid + 1;
+//                 }
+//             }
+//             if(ans != -1) total_count += (grid[i].length - ans);
+//         }
+//         return total_count;
+//     }
+// }
+// // TC : O(m * log(n))
 
-            while (low <= high) {
-                int mid = low + (high - low) / 2;
-                if (check(grid[i], mid) == 0) {
-                    low = mid + 1;
-                } else {
-                    res_temp = mid;
-                    high = mid - 1;
-                }
-            }
-            if (res_temp != -1) 
-                res_temp = grid[i].length - res_temp;
-            else 
-                res_temp = 0;
-
-            res += res_temp;
-        }
-        return res;
-    }
-} // TC : O(m * log n)
-
-// The better approach would be of O(m + n) which is pointers based
+// Approach 2 - Two Pointer
 class Solution {
     public int countNegatives(int[][] grid) {
         int total_rows = grid.length;
         int total_columns = grid[0].length;
         int row = 0;
-        int column = grid[0].length-1;
-
-        int totalNegatives = 0;
+        int column = grid[0].length - 1;
+        int total_count = 0;
 
         while(row < total_rows && column >= 0) {
             if(grid[row][column] < 0) {
-                // All elements below in this column are negative
-                totalNegatives += total_rows - row;
-                column--; // Move left to next column
+                total_count += total_rows - row;
+                column--;
             } else {
-                row++; // Move down to next row
+                row++;
             }
         }
-        return totalNegatives;
+        return total_count;
     }
-} // TC : O(m + n)
+} 
+// TC : O(m + n)
+
