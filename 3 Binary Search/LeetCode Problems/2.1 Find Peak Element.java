@@ -20,15 +20,14 @@ class Solution {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            // This is the key change to prevent out-of-bounds error
-            if (mid < nums.length - 1 && nums[mid] < nums[mid + 1]) {
-                // We are on an uphill slope, so the peak is to the right.
-                low = mid + 1;
-            } else {
-                // We are on a downhill slope or at the very end of the array.
-                // This could be a peak.
+            // This is the core logic that handles all cases
+            // 1. A downhill slope (nums[mid] > nums[mid+1])
+            // 2. The very last element of the array
+            if (mid == nums.length - 1 || nums[mid] > nums[mid + 1]) {
                 result = mid;
                 high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
         return result;
