@@ -10,6 +10,7 @@ than a neighbor that is outside the array.
 You must write an algorithm that runs in O(log n) time.
 */
 
+// Think we can have multiple peaks and the last element of the array could be a peak as well
 class Solution {
     public int findPeakElement(int[] nums) {
         int low = 0;
