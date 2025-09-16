@@ -10,6 +10,7 @@
 class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         // Step 1 : Find the index of the peak element in the mountain array
+        // mountainArr.get(k) api is used 2 * log(n) times
         int low = 0;
         int high = mountainArr.length() - 1;
         int peak = -1;
@@ -26,6 +27,7 @@ class Solution {
         }
 
         // Step 2 : Search in the left portion as we need to return the first index of the target
+        // mountainArr.get(k) api is used log(n) times
         low = 0;
         high = peak;
 
@@ -42,6 +44,7 @@ class Solution {
         }
 
         // Step 3 : Check for the target in the right portion
+        // mountainArr.get(k) api is used log(n) times
         low = peak;
         high = mountainArr.length() - 1;
 
@@ -59,3 +62,5 @@ class Solution {
         return -1;
     }
 } // TC : O(log n)
+
+// In total, mountainArr.get(k) api is used 4 * log(n) times, that is, ~log(n) times.
