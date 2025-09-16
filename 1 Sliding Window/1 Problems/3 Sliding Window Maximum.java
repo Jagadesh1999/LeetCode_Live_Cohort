@@ -41,4 +41,4 @@ class Solution {
         }
         return ans;
     }
-} // TC : O(n), SC : 2 * O(n - k + 1) -> O(n - k + 1)
+} // TC : O(n), SC : O(n - k + 1) -> O(n - k + 1)
