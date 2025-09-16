@@ -10,7 +10,7 @@ class Solution {
         int resMax = -1;
         
         while(tail < s.length()) {
-            while(head+1 < s.length() && (map.getOrDefault(s.charAt(head+1), 0) > 0 || distinctCount < k)) {
+            while(head+1 < s.length() && (map.getOrDefault(s.charAt(head+1), 0) >= 1 || distinctCount < k)) {
                 head++;
                 map.put(s.charAt(head), map.getOrDefault(s.charAt(head), 0)+1);
                 if(map.get(s.charAt(head)) == 1) distinctCount++;
