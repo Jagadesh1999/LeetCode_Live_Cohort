@@ -35,7 +35,7 @@ class Solution {
                 tail++;
                 head = tail - 1;
                 need.clear();
-                required = t.length();
+                required = t.length(); // This part is very important
             }else{
                 need.put(s.charAt(tail), need.get(s.charAt(tail)) + 1);
                 if(need.get(s.charAt(tail)) > 0) {
