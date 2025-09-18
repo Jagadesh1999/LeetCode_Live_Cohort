@@ -23,7 +23,7 @@ class Solution {
             if(max < piles[i]) {
                 max = piles[i];
             }
-        }
+        } // O(log n)
 
         int low = 1;
         int high = max;
@@ -49,10 +49,8 @@ class Solution {
             }
         }
         return result;
-    }
-} 
-
-
+    } // O(log M * N)
+} // TC : O(N) + O(log M * N) ~ O(N log M)
 
 
 // Input: piles = [3,6,7,11], h = 8
