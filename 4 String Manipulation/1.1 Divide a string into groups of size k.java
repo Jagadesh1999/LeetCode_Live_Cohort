@@ -1,9 +1,9 @@
 class Solution {
     public String[] divideString(String s, int k, char fill) {
         // If the length of s is not a multiple of k, pad s with fill so that it becomes a multiple of k
-        int remainder = s.length() % k;
-        if (remainder != 0) {
-            int paddingNeeded = k - remainder;
+        int reminder = s.length() % k;
+        if (reminder != 0) {
+            int paddingNeeded = k - reminder;
             // Create a char array of length paddingNeeded filled with fill character
             char[] fillChars = new char[paddingNeeded];
             Arrays.fill(fillChars, fill);
