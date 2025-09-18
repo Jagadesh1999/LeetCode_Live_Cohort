@@ -51,4 +51,34 @@ class Solution {
             return result * result * x;
         }
     }
-} // TC : O(log n)
+} // TC : O(log n), SC : O(log n)
+
+// Iterative Approach :
+// Check, Square, Shift Framework
+
+// We're essentially building the solution by accumulating the products of x corresponding to the 1 bits in the exponent. The powers of x that correspond to the 0 bits are simply not needed for the final answer.
+
+class Solution {
+    public double myPow(double x, int n) {
+        long N = n;
+
+        if(n < 0) {
+            N = -(N);
+            x = 1/x;
+        }
+
+        double result = 1.0;
+
+        while(N > 0) {
+            // Check if the current bit of N is 1 (N is odd)
+            if(N % 2 == 1) {
+                result = result * x;
+            }
+            // Square x for the next bit
+            x = x * x;
+            // Shift N to the right by one bit
+            N = N / 2;
+        }
+        return result;
+    }
+} // TC : O(log n), SC : O(1)
