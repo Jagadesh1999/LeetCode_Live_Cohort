@@ -34,17 +34,17 @@ class Solution {
 
         while(low <= high) {
             int mid = low + (high - low) / 2;
-            long timeTakenToEatBananas = 0;
+            long hoursNeeded = 0;
 
             // Understand the below part of implementation style
             for(int i = 0; i < piles.length; i++) {
-                timeTakenToEatBananas += piles[i] / mid;
+                hoursNeeded += piles[i] / mid;
                 if(piles[i] % mid != 0) {
-                    timeTakenToEatBananas += 1; // As there is a residual part
+                    hoursNeeded += 1; // As there is a residual part
                 } 
             }
 
-            if(timeTakenToEatBananas <= h) {
+            if(hoursNeeded <= h) {
                 result = mid;
                 high = mid - 1;
             } else {
