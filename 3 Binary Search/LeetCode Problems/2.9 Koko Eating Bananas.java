@@ -15,6 +15,9 @@
 // 1. Size of array should not be more than h, if thats the case there is no possible answer -1
 // 2. If the size of the array is equal to h, then the minimum speed will be the maximum value in the array
 
+// Question can be framed as, in each iteration of Binary search, we will check, can we finish eating all the bananas 
+// in h hours if we eat k bananas per hour
+
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         // Find the max range
