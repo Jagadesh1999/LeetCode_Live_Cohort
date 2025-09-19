@@ -20,7 +20,12 @@
 
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        // Find the max range
+        // Step 1 - Edge case
+        if (h < piles.length) { 
+            return -1;
+        }
+        
+        // Step 2 - Find the max range
         int max = piles[0];
         for(int i = 1; i < piles.length; i++) {
             if(max < piles[i]) {
@@ -32,10 +37,12 @@ class Solution {
         int high = max;
         int result = -1;
 
+        // Step 3 - Binary search on ans
         while(low <= high) {
             int mid = low + (high - low) / 2;
             long hoursNeeded = 0;
 
+            // Step 4 - Check the feasibilty
             // Understand the below part of implementation style
             for(int i = 0; i < piles.length; i++) {
                 hoursNeeded += piles[i] / mid;
