@@ -30,8 +30,63 @@ Packages must be shipped in the order they're given. You can't change the order.
 Each ship can carry one or more packages, but the total weight of packages on a single ship can't exceed its maximum weight capacity.
 */
 
-
-
+class Solution {
+    public int shipWithinDays(int[] weights, int days) {
+        // Edge case : 
+        if (days > weights.length) {
+            return -1;
+        }
+        
+        // Finding the lowest range
+        int maximum = weights[0];
+        for(int i = 1; i < weights.length; i++) {
+            if(weights[i] > maximum) {
+                maximum = weights[i];
+            }
+        }
+        
+        // Finding the highest range
+        int sum = 0;
+        for(int i = 0; i < weights.length; i++) {
+            sum += weights[i];
+        }
+        
+        int low = maximum;
+        int high = sum;
+        int result = -1;
+        
+        // Binary search on ans
+        while(low <= high) {
+            int mid = low + (high - low) / 2;
+            
+            long daysNeeded = 1;
+            long currentWeight = 0;
+            boolean possible = true;
+            
+            // Feasibility check
+            for(int i = 0; i < weights.length; i++) {
+                if(currentWeight + weights[i] > mid) {
+                    daysNeeded++;
+                    currentWeight = weights[i];
+                    if(daysNeeded > days) {
+                        possible = false;
+                        break;
+                    }
+                } else {
+                    currentWeight += weights[i];
+                }
+            }
+            
+            if(daysNeeded <= days) {
+                result = mid;
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return result;
+    }
+} // TC : O(n * log s)
 
 
 
