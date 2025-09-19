@@ -1,6 +1,17 @@
+/*
+Input: arr[] = [5, 10, 30, 20, 15], k = 3
+Output: 35
+Explanation: The most optimal way will be: Painter 1 allocation : [5,10], Painter 2 allocation : [30], Painter 3 
+allocation : [20, 15], Job will be done when all painters finish i.e. at time = max(5 + 10, 30, 20 + 15) = 35
+
+Input: arr[] = [10, 20, 30, 40], k = 2
+Output: 60
+Explanation: The most optimal way to paint: Painter 1 allocation : [10, 20, 30], Painter 2 allocation : [40], 
+Job will be complete at time = 60 
+*/
+
 class Solution {
     public int minTime(int[] arr, int k) {
-        // code here
         // Edge case : 
         if (k > arr.length) {
             return -1;
