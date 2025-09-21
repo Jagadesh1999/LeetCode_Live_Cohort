@@ -28,4 +28,4 @@ class CheckPrimesTillN {
             }
         }
     }
-} // TC : O(n * n), SC : O(1)
+} // TC : O(n * sqrt(n)), SC : O(1)
