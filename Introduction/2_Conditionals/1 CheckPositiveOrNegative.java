@@ -1,5 +1,5 @@
 // 1. Check if positive, negative or zero
-public class Main
+public class CheckPositiveOrNegative
 {
 	public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
