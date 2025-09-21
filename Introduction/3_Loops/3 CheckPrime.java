@@ -1,9 +1,10 @@
 import java.util.*;
+
 class Prime {
     public static void CheckPrime(String[] args){
-        Scanner scn = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int num = scn.nextInt();
+        int num = sc.nextInt();
         boolean isPrime = true;
 
         // for(int i = 2; i < num; i++){
