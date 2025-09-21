@@ -23,7 +23,7 @@ class CheckPrimesTillN {
     
             // 64 -> 1*64, 2*32, 4*16, 8*8, 16*4 
             for(int j = 2; j * j <= num; j++){ // i <= root(num) = i*i <= num
-                if(num % j == 0){
+                if(i % j == 0){
                     isPrime = false;
                     break;
                 }
