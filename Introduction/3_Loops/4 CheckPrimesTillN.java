@@ -14,7 +14,7 @@ class CheckPrimesTillN {
         for(int i = 2; i <= num; i++) {
             boolean isPrime = true;
             
-            for(int j = 2; j * j <= num; j++){ // i <= root(num) = i*i <= num
+            for(int j = 2; j * j <= i; j++){ // i <= root(num) = i*i <= num
                 if(i % j == 0){
                     isPrime = false;
                     break;
