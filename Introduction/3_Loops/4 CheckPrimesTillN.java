@@ -10,18 +10,10 @@ class CheckPrimesTillN {
             System.out.println("1 is neither Prime nor Composite");
             return;
         }
-        
-        boolean isPrime = true;
 
         for(int i = 2; i <= num; i++) {
-            // for(int j = 2; j < num; j++){
-            //     if(num % j == 0){
-            //         isPrime = false;
-            //         break;
-            //     }
-            // }
-    
-            // 64 -> 1*64, 2*32, 4*16, 8*8, 16*4 
+            boolean isPrime = true;
+            
             for(int j = 2; j * j <= num; j++){ // i <= root(num) = i*i <= num
                 if(i % j == 0){
                     isPrime = false;
