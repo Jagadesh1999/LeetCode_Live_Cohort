@@ -4,6 +4,8 @@ class CheckPrimesTillN {
         Scanner sc = new Scanner(System.in);
 
         int num = sc.nextInt();
+
+        // Edge Case :
         if(num == 1) {
             System.out.println("1 is neither Prime nor Composite");
             return;
