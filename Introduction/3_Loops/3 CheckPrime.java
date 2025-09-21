@@ -5,6 +5,11 @@ class Prime {
         Scanner sc = new Scanner(System.in);
 
         int num = sc.nextInt();
+        if(num == 1) {
+            System.out.println("1 is neither Prime nor Composite");
+            return;
+        }
+        
         boolean isPrime = true;
 
         // for(int i = 2; i < num; i++){
@@ -28,4 +33,4 @@ class Prime {
             System.out.println("This is not a prime number.");
         }
     }
-} // TC : O(n), SC : O(1)
+} // TC : O(sqrt(n)), SC : O(1)
