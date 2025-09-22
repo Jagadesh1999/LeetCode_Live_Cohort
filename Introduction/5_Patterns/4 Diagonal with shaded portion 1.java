@@ -35,16 +35,20 @@ import java.util.*;
    Take any cell holding the value except the line cells to get the correct condition.
    Lets take, (4,3) -> i = 4, j = 3, c = n-1, that is, 3, so the condition becomes i + j >= number - 1
    */
-    
-    for(int i = 0; i < num; i++) {
-        for(int j = 0; j < num; j++) {
-            if(i + j >= num - 1) {
-                System.out.print("* ");
-            } else {
-                System.out.print(" ");
-            }
-        } 
-        System.out.println();
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for(int i = 0; i < num; i++) {
+            for(int j = 0; j < num; j++) {
+                if(i + j >= num - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print(" ");
+                }
+            } 
+            System.out.println();
+        }
     }
-    
 }
