@@ -1,4 +1,4 @@
-// Left Diagonal of a matrix
+// Right Diagonal of a matrix
 
 import java.io.*;
 import java.util.*;
