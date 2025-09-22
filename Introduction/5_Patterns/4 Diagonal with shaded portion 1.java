@@ -1,3 +1,5 @@
+// Left Right angle triangle pattern
+
 import java.io.*;
 import java.util.*;
 
