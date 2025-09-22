@@ -51,4 +51,4 @@ public class Main {
             System.out.println();
         }
     }
-}
+} // TC : O(n * n), SC : O(1)
