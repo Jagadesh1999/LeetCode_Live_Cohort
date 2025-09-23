@@ -27,7 +27,10 @@ public class Main
 	    int x = sc.nextInt();
 	    
 	    boolean isPresent = solve(nums, x);
-	    
-	    System.out.println(count);
+
+		if(isPresent) {
+			System.out.println("The target is present inside the array.");
+		} else {
+			System.out.println("The target is not present inside the array.");
 	}
 } 
