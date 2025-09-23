@@ -27,7 +27,7 @@ public class Main
         int rem = num % divisor;
         int quo = num / divisor;
         
-        int rotatedNumber = rem * mul + quo;
+        int rotatedNumber = rem * mul + quo; // Framework to remember
 
         System.out.println("Rotated number is " + rotatedNumber);
     }
