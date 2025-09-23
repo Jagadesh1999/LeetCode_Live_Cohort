@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+// Framework : Right to Left with the carry
 public class Main
 {
 	public static void solve(int[] nums_1, int[] nums_2) {
