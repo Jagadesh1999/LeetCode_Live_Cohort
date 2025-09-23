@@ -48,7 +48,7 @@ public class Main
 	       System.out.print(resultNums[l] + " ");
 	    }
         
-	} // TC : O(n), SC : O(1)
+	} // TC : O(n), SC : O(n)
 	
 	public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
