@@ -35,4 +35,31 @@ public class Main {
 	    
 	    solve(nums, target);
 	}
-} 
+} // TC : O(log n)
+
+// public static int[] FindFloorAndCeil(int[] arr, int target){
+//         int n = arr.length;
+
+//         int si = 0;
+//         int ei = n-1;
+//         int floor = Integer.MIN_VALUE;
+//         int ceil = Integer.MAX_VALUE;
+
+//         while(si <= ei){
+//             int mid = (si + ei)/2;
+
+//             if(arr[mid] == target){
+//                 floor = arr[mid];
+//                 ceil = arr[mid];
+//                 break;
+//             } else if(arr[mid] < target){
+//                 floor = arr[mid];
+//                 si = mid + 1;
+//             } else {
+//                 ceil = arr[mid];
+//                 ei = mid - 1;
+//             }
+//         }
+
+//         return new int[]{floor, ceil};
+//     }
