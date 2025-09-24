@@ -1,3 +1,5 @@
+// Can only be performed if both matrices have the sime dimension.
+
 public class MatrixAddition {
     public static void main(String[] args) {
 
