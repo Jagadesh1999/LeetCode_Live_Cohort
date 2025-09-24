@@ -11,6 +11,10 @@ public class Main
 	public static void main(String[] args) {
 		int[][] matrixA = {{1, 2}, {3, 4}};
 		int[][] matrixB = {{5, 6}, {7, 8}};
+
+		if(matrixA[0].length == matrixB[0].length) {
+			System.out.println("Multiplication of matrices are not possible.");
+		}
 		
 		int[][] result = new int[2][2];
 		
