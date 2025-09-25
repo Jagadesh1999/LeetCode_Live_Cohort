@@ -5,8 +5,14 @@ import java.io.*;
 public class Main {
     public static void solve(int[][] arr){
         for(int j = 0; j < arr[0].length; j++) {
-            for(int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i][j] + " ");
+            if(j % 2 == 0) {
+                for(int i = 0; i < arr.length; i++) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            } else {
+                for(int i = arr.length; i >= 0; i--) {
+                    System.out.print(arr[i][j] + " ");
+                }
             }
             System.out.println();
         }
