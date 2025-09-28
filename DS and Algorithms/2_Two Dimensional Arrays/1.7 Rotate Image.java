@@ -12,7 +12,7 @@ class Solution {
             }
         }
 
-        // 2. Reverse each row
+        // 2. Reverse each row of the matrix (imp : the framework actually differs for a matrix)
         // This is done using a two-pointer approach (left and right).
         for (int i = 0; i < N; i++) {
             int left = 0;
@@ -26,5 +26,6 @@ class Solution {
                 right--;
             }
         }
+        return matrix;
     }
 } // TC : O(n^2)
