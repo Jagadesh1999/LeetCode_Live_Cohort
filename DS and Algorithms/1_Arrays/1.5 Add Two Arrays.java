@@ -31,7 +31,7 @@ public class Main
             carry = sum / 10;
 	    }
 	    
-	    Collections.reverse(resultList); 
+	    Collections.reverse(resultList); // Most important
 	    
 	    // Convert the List to an int array and return
         int[] resultNums = new int[resultList.size()];
