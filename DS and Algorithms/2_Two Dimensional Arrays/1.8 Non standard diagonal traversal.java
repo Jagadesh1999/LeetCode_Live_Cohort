@@ -16,7 +16,7 @@ class Solution {
         }
 
         for(int k = 1; k < mat[0].length; k++) {
-            int i = mat.length - 1;
+            int i = mat.length - 1; // Know the reasoning behind the value of initialisation
             int j = k;
 
             while(j < mat[0].length && i >= 0) { // Know the reason behind the while loop condition
