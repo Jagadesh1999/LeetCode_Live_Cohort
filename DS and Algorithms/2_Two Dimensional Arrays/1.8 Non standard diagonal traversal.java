@@ -7,7 +7,7 @@ class Solution {
             int i = k;
             int j = 0;
 
-            while(i >= 0) { // Know the reason behind the while loop condition
+            while(i >= 0 && j < mat[0].length) { // Know the reason behind the while loop condition
                 System.out.print(mat[i][j]);
                 i = i - 1;
                 j = j + 1;
@@ -19,7 +19,7 @@ class Solution {
             int i = mat.length - 1;
             int j = k;
 
-            while(j < mat[0].length) { // Know the reason behind the while loop condition
+            while(j < mat[0].length && i >= 0) { // Know the reason behind the while loop condition
                 System.out.print(mat[i][j]);
                 i = i - 1;
                 j = j + 1;
