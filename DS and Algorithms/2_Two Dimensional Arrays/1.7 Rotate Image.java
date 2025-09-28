@@ -5,7 +5,7 @@ class Solution {
         // 1. Transpose the matrix
         // We iterate only over the upper triangle (j >= i) to avoid double-swapping.
         for (int i = 0; i < N; i++) {
-            for (int j = i; j < N; j++) {
+            for (int j = i; j < N; j++) { // Remember the reasoning behind this condition
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
