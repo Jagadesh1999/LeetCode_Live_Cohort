@@ -1,3 +1,11 @@
+// Recursive Idea :
+// 5 * fact(4); - 5 * 24 = 120
+// 4 * fact(3); - 4 * 6 = 24
+// 3 * fact(2); - 3 * 2 = 6
+// 2 * fact(1); - 2 * 1 = 2
+// 1 * fact(0); - 1 * 1 = 1
+// fact(0) - return 1;
+
 import java.io.*;
 import java.util.*;
 
@@ -21,3 +29,5 @@ public class Main
 		System.out.print(factorial(number));
 	}
 } // TC : O(n), SC : O(n)
+
+
