@@ -1,10 +1,10 @@
 // Recursive Idea :
-// 5 * fact(4); - 5 * 24 = 120
-// 4 * fact(3); - 4 * 6 = 24
-// 3 * fact(2); - 3 * 2 = 6
-// 2 * fact(1); - 2 * 1 = 2
-// 1 * fact(0); - 1 * 1 = 1
-// fact(0) - return 1;
+// fact(5) => 5 * fact(4); - 5 * 24 = 120
+// fact(4) =>4 * fact(3); - 4 * 6 = 24
+// fact(3) =>3 * fact(2); - 3 * 2 = 6
+// fact(2) =>2 * fact(1); - 2 * 1 = 2
+// fact(1) =>1 * fact(0); - 1 * 1 = 1
+// fact(0) =>fact(0) - return 1;
 
 import java.io.*;
 import java.util.*;
