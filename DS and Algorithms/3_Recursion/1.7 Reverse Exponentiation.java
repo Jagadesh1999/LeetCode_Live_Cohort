@@ -1,29 +1,23 @@
-import java.io.*;
-import java.util.*;
-
-public class Main
-{
-    public static long power(int number, int exponent) {
+class Solution {
+    public static int power(int number, int exponent) {
         if(exponent == 0) {
             return 1; 
         }
         return number * power(number, exponent - 1); 
     }
-    
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int number = sc.nextInt();
+
+	public int reverseExponentiation(int n) {
+        int temp = n; int reverse = 0;
 		
-		int temp = number; int reverse = 0;
-		
-		while(number != 0) {
-		    int last = number % 10;
+		while(n != 0) {
+		    int last = n % 10;
 		    reverse = (reverse * 10) + last;
-		    number /= 10;
+		    n /= 10;
 		}
 		
-		long result = power(temp, reverse);
+		int result = power(temp, reverse);
 		
-		System.out.println(result);
-	}
+		return result;
+        
+    }
 } // TC : O(n), SC : O(n)
