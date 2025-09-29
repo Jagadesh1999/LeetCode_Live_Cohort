@@ -6,6 +6,8 @@
 // fact(1) => 1 * fact(0); - 1 * 1 = 1
 // fact(0) => return 1;
 
+// Recurrence Relation : Factorial(5) - 5 * Factorial(4);
+
 import java.io.*;
 import java.util.*;
 
