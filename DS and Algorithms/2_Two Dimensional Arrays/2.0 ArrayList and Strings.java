@@ -1,3 +1,6 @@
+// Upper Case to Lower Case : (char)('a' + (ch - 'A'))
+// Lower Case to Upper Case : (char)('A' + (ch - 'a'))
+
 import java.util.*;
 class Main {
     public static String toggleCase(String str){
