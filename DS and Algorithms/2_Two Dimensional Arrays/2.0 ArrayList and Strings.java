@@ -7,7 +7,7 @@ class Main {
             char ch = str.charAt(i);
 
             if(ch >= 'A' && ch <= 'Z'){ // uppercase char
-                sb.append((char)('a' + (ch - 'A')));
+                sb.append((char)('a' + (ch - 'A'))); // Mathematical operation on character returns integer
             } else if(ch >= 'a' && ch <='z'){ // lowercase char
                 sb.append((char)('A' + (ch - 'a')));
             } else { // not english char
