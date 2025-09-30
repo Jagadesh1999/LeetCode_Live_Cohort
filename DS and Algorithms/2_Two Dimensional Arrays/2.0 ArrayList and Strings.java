@@ -38,6 +38,8 @@ class Main {
         // al.remove(index);
         // System.out.println(al.get(index));
 
+        // Key Takeaway: ArrayList is good for accessing and replacing elements (via index), but relatively slow for inserting or deleting in the middle dut to O(n) TC
+        
         // StringBuilder sb = new StringBuilder();
         // sb.append("abcd");
         // sb.setCharAt(1,'Z');
