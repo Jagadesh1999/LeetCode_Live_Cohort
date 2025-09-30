@@ -4,6 +4,7 @@
 import java.util.*;
 class Main {
     public static String toggleCase(String str){
+        // Efficient method to manipulate strings
         StringBuilder sb = new StringBuilder();
 
         for(int i=0; i<str.length(); i++){
