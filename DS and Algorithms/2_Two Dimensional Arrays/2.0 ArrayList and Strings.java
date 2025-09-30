@@ -35,8 +35,8 @@ class Main {
         // al.set(3,100); - Replaces new element
         // System.out.println(al);
 
-        // al.remove(3);
-        // System.out.println(al.get(2));
+        // al.remove(index);
+        // System.out.println(al.get(index));
 
         // StringBuilder sb = new StringBuilder();
         // sb.append("abcd");
