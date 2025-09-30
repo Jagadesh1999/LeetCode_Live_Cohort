@@ -29,10 +29,10 @@ class Main {
         // al.add(1);
         // al.add(2);
         // al.add(3);
-        // // al.add(2,98);
+        // // al.add(2,98); - Adds new element
         
 
-        // al.set(3,100);
+        // al.set(3,100); - Replaces new element
         // System.out.println(al);
 
         // al.remove(3);
